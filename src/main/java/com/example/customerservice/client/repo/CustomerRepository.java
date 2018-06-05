@@ -1,6 +1,6 @@
-package com.example.customerservice.repo;
+package com.example.customerservice.client.repo;
 
-import com.example.customerservice.domain.Customer;
+import com.example.customerservice.client.domain.Customer;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,4 +1,4 @@
-package com.example.customerservice.domain;
+package com.example.customerservice.client.domain;
 
 import java.util.concurrent.atomic.AtomicLong;
 
