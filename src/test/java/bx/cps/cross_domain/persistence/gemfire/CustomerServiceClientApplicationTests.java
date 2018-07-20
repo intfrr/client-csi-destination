@@ -1,4 +1,4 @@
-package com.example.customerservice;
+package bx.cps.cross_domain.persistence.gemfire;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

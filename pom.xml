@@ -9,20 +9,22 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.2.RELEASE</version>
 	</parent>
-
-	<groupId>com.example</groupId>
-	<artifactId>customer-service</artifactId>
+	
+	<groupId>bx.cps.cross-domain.persistence.gemfire</groupId>
+	<artifactId>client-csi-destination</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>customer-service</name>
-	<description>Demo project for Apache Geode</description>
+	<name>client-csi-destination</name>
+	<description>Gemfire CSI Destination Client</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-data-releasetrain.version>Kay-BUILD-SNAPSHOT</spring-data-releasetrain.version>
+    <!-- The main class to start by executing java -jar -->
+    <start-class>bx.cps.cross_domain.persistence.gemfire.CustomerServiceClientApplication</start-class>
 	</properties>
 
 	<dependencies>

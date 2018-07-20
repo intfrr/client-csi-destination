@@ -1,4 +1,4 @@
-package com.example.customerservice.client.config;
+package bx.cps.cross_domain.persistence.gemfire.config;
 
 import java.util.function.Predicate;
 
@@ -10,7 +10,7 @@ import org.springframework.data.gemfire.mapping.MappingPdxSerializer;
 /**
  * The CustomMappingPdxSerializerConfiguration class...
  *
- * @author John Blum
+ * @author Nadir Palacios
  * @since 1.0.0
  */
 @Configuration
@@ -35,7 +35,9 @@ public class CustomMappingPdxSerializerConfiguration {
 
 		MappingPdxSerializer mappingPdxSerializer = MappingPdxSerializer.newMappingPdxSerializer();
 
-		mappingPdxSerializer.setTypeFilters(excludeTypeFilters);
+//		mappingPdxSerializer.setTypeFilters(excludeTypeFilters);
+		
+		mappingPdxSerializer.setExcludeTypeFilters(excludeTypeFilters);
 
 		return mappingPdxSerializer;
 	}

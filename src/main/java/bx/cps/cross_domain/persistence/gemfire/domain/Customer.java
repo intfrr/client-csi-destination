@@ -1,28 +1,29 @@
-package com.example.customerservice.client.domain;
+package bx.cps.cross_domain.persistence.gemfire.domain;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.gemfire.mapping.annotation.Region;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-
 /**
- * Created by sbawaskar on 5/29/18.
+ * Created by nadir on 16/07/18.
  */
 @Data
-@EqualsAndHashCode(of = { "name" })
-@ToString(of = { "name" })
+@EqualsAndHashCode(of = { "id" })
+@ToString(of = { "id" })
 @Region("customers")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
   private static AtomicLong COUNTER = new AtomicLong(0L);
 
   @Id
   private Long id;
-
+  
+  private Long CSID;
+  
   private String name;
   private String street;
   private String city;
@@ -32,4 +33,5 @@ public class Customer {
     this.id = COUNTER.getAndIncrement();
     this.name = name;
   }
+  
 }
