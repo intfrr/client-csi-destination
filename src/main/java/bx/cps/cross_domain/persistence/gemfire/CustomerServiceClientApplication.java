@@ -36,28 +36,4 @@ public class CustomerServiceClientApplication {
 		SpringApplication.run(CustomerServiceClientApplication.class, args);
 	}
 
-	@Bean
-	ApplicationRunner run(CustomerRepository customerRepository) {
-
-		return args -> {
-
-			Customer C112888227 = new Customer(112888227L, 4L, "León", "Alfonso Nápoles Gándara 1117, Santa Fe, Zedec Sta Fé", "Mexico City", "01219");
-			Customer C112888228 = new Customer(112888228L, 4L, "León", "Alfonso Nápoles Gándara 1117, Santa Fe, Zedec Sta Fé", "Mexico City", "01219");
-			
-			customerRepository.save(C112888227);
-			customerRepository.save(C112888228);
-
-			System.out.println("Customers are: "+customerRepository.findAll());
-			
-			if(customerRepository.existsById(112888227L)) {
-				System.out.println("Customer  112888227L exists");
-			}
-			
-			
-			if(!customerRepository.existsById(112888229L)) {
-				System.out.println("Customer 112888229L does not exist");
-			}
-			
-		};
-	}
 }
