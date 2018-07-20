@@ -19,14 +19,14 @@ import org.springframework.geode.config.annotation.UseMemberName;
 @EnableClusterConfiguration
 //@EnableEntityDefinedRegions(basePackageClasses = Customer.class)
 /*@EnableEntityDefinedRegions(
-	basePackages = Array("bx.cps.cross-domain.persistence.gemfire.client-csi-destination"),
+	basePackages = Array("bx.cps.cross_domain.persistence.gemfire.domain"),
 	useDefaultFilters = false,
 	includeFilters = Array(
 		new ComponentScan.Filter(`type` = FilterType.ASSIGNABLE_TYPE,
-		value = Array(classOf[bx.cps.cross-domain.persistence.gemfire.client-csi-destination]))))
+		value = Array(classOf[bx.cps.cross_domain.persistence.gemfire.domain]))))
 )*/
-//@EnableEntityDefinedRegions(basePackageClasses = Array("bx.cps.cross-domain.persistence.gemfire.client-csi-destination"))
-@EnableEntityDefinedRegions("com.example.customerservice.client.domain")
+//@EnableEntityDefinedRegions(basePackageClasses = Array("bx.cps.cross_domain.persistence.gemfire.domain"))
+@EnableEntityDefinedRegions("bx.cps.cross_domain.persistence.gemfire.domain")
 @UseMemberName("CustomerServiceClientApplication")
 //@UseMemberName(${csi-destination.member.application.name})
 @Import(CustomMappingPdxSerializerConfiguration.class)
